@@ -1,4 +1,4 @@
-# helloworld
+# Vue.js Test Repository
 
 ## Project setup
 ```
@@ -21,4 +21,4 @@ npm run lint
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Configuration Reference](https://cli.vuejs.org/config/).
