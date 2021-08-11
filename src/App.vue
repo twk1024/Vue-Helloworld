@@ -7,8 +7,7 @@
     >
     <v-app-bar-nav-icon @click="drawer = !drawer"/>
 
-    <v-toolbar-title>Hello, World</v-toolbar-title>
-
+    <sendTitle :title="title"/>
     <v-spacer></v-spacer>
 
     <v-btn icon>
@@ -16,33 +15,35 @@
     </v-btn>
 
     </v-app-bar>
+    
     <v-navigation-drawer app v-model="drawer">
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="title">
-            Menu
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            Hello, World
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
+      <navMenu :menutitle="menutitle" :menusubtitle="menusubtitle"/>
     </v-navigation-drawer>
+
+      <v-divider></v-divider>
+    
     <v-content app>
       <router-view/>
     </v-content>
-    <v-footer color="primary" dark>
-      <v-spacer/>Copyright twk1024 2021
-    </v-footer>
+    <sendFooter :footer="footer"/>
   </v-app>
 </template>
 
 <script>
+import sendTitle from '@/components/title'
+import navMenu from '@/components/menu'
+import sendFooter from '@/components/footer'
+
 export default {
   name: 'App',
+  components: {sendTitle, navMenu ,sendFooter},
   data () {
     return {
-      drawer: false
+      drawer: false,
+      title: "Hello, World",
+      footer: "© 2021 Taewon Kim (dokidia)",
+      menutitle: "Main Menu",
+      menusubtitle: "Subtitle"
     }
   }
 }
