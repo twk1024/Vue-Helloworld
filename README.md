@@ -1,5 +1,8 @@
 # My Personal Vue.js Repository
 
+## Running Image
+![preview](https://cloud.diamc.kr/images/vue.js-test.png)
+
 ## Project setup
 ```
 npm install
