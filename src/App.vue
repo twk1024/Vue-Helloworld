@@ -5,7 +5,7 @@
       color="primary"
       dark
     >
-    <v-app-bar-nav-icon/>
+    <v-app-bar-nav-icon @click="drawer = !drawer"/>
 
     <v-toolbar-title>Hello, World</v-toolbar-title>
 
@@ -16,7 +16,18 @@
     </v-btn>
 
     </v-app-bar>
-
+    <v-navigation-drawer app v-model="drawer">
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="title">
+            Menu
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            Hello, World
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+    </v-navigation-drawer>
     <v-content app>
       <router-view/>
     </v-content>
@@ -29,5 +40,10 @@
 <script>
 export default {
   name: 'App',
-};
+  data () {
+    return {
+      drawer: false
+    }
+  }
+}
 </script>
