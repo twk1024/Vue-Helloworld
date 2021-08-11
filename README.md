@@ -1,4 +1,4 @@
-# Vue.js Test Repository
+# My Personal Vue.js Repository
 
 ## Project setup
 ```
