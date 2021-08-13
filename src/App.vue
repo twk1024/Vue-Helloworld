@@ -17,7 +17,7 @@
     </v-app-bar>
     
     <v-navigation-drawer app v-model="drawer">
-      <navMenu :menutitle="menutitle" :menusubtitle="menusubtitle"/>
+      <navMenu :navtitle="navtitle" :subtitle="subtitle"/>
     </v-navigation-drawer>
 
       <v-divider></v-divider>
@@ -42,8 +42,8 @@ export default {
       drawer: false,
       title: "Hello, World",
       footer: "© 2021 Taewon Kim (dokidia)",
-      menutitle: "Main Menu",
-      menusubtitle: "Subtitle"
+      navtitle: "Main Menu",
+      subtitle: "Subtitle"
     }
   }
 }
